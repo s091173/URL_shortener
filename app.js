@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 })
 
 
-// after submit
+// submit request
 app.post('/', (req, res) => {
   // 宣告短網址變數
   let shortUrl = ''
@@ -75,6 +75,17 @@ app.post('/', (req, res) => {
     })
     .then(() => {
       res.render('index', { shortUrl, url })
+    })
+    .catch(error => console.log(error))
+})
+
+// shortUrl request
+app.get('/:code', (req, res) => {
+  const code = req.params.code
+  Url.findOne({ code: code })
+    .lean()
+    .then(url => {
+      res.redirect(url.name)
     })
     .catch(error => console.log(error))
 })
