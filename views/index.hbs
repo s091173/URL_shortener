@@ -1,8 +1,10 @@
 <div class="text-center">
-  <h1 class="title my-5">URL Shortener</h1>
-  <i class="fas fa-link fa-9x my-5"></i>
+  <h1 class="title mt-5">URL Shortener</h1>
+  <a href="/"><i class="fas fa-link fa-9x mt-5"></i></a>
 
-  <form action="/shorten" method="POST">
+  <div class="text-muted mt-5">"click the logo to reset"</div>
+
+  <form action="/shorten" method="POST" class="mt-5">
 
     <input type="url" id="url-input" name="url" placeholder="Input URL here" style="width: 500px;" {{#if
       shortUrl}}value="http://localhost:3000/shorten/{{shortUrl}} {{/if}}" required>
