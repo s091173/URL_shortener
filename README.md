@@ -25,7 +25,7 @@ git clone https://github.com/s091173/URL_shortener.git
 ```
 2. Enter the project file.
 ```
-cd restaurant_list
+cd url_shortener
 ```
 3. Install npm.
 ```
