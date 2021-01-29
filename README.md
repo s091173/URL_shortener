@@ -1,6 +1,8 @@
 # URL_shortener
 A online tool for shortening URLs
 
+![Image](https://github.com/s091173/URL_shortener/blob/master/URL_shortener.png)
+
 - ## Features :
 * Input URL
 * Get the shorten link for each website
