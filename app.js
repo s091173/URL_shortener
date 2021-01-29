@@ -1,26 +1,15 @@
 const express = require('express')
-const mongoose = require('mongoose')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 
 // 引用路由器
 const routes = require('./routes')
+// 引用 mongoose 
+require('./config/mongoose')
 
 const app = express()
 
 const PORT = 3000
-
-mongoose.connect('mongodb://localhost/url-shortener', { useNewUrlParser: true, useUnifiedTopology: true })
-
-const db = mongoose.connection
-
-db.on('error', () => {
-  console.log('mongodb error')
-})
-
-db.once('open', () => {
-  console.log('mongodb connected!')
-})
 
 // setting template engine
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
