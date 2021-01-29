@@ -7,7 +7,7 @@
   <form action="/shorten" method="POST" class="mt-5">
 
     <input type="url" id="url-input" name="url" placeholder="Input URL here" style="width: 500px;" {{#if
-      shortUrl}}value="http://localhost:3000/shorten/{{shortUrl}} {{/if}}" required>
+      shortUrl}}value="https://rocky-brushlands-42655.herokuapp.com/shorten/{{shortUrl}} {{/if}}" required>
 
     <div class="mt-3">
       {{#unless shortUrl}}<input class="btn btn-outline-primary" type="submit" value="Shorten">{{/unless}}
